@@ -833,7 +833,7 @@ get firstSingFutPerPass(){
       return this.second.slice(0,-3) + "ēbaris";
      } else if (this.second.slice(-3,) == "iri"){
       return this.second.slice(0,-3) + "iēbaris";
-    } else if (this.first.slice(-2,) == "ior" && this.second.slice(-1,) == "i"){
+    } else if (this.first.slice(-3,) == "ior" && this.second.slice(-1,) == "i"){
       return this.second.slice(0,-1) + "iēbaris";
     } else if (this.second.slice(-1,) == "i"){
       return this.second.slice(0,-1) + "ēbaris";
@@ -862,7 +862,7 @@ get firstSingFutPerPass(){
       return this.second.slice(0,-3) + "ēberis";
     } else if (this.second.slice(-3,) == "iri"){
       return this.second.slice(0,-3) + "iēris";
-    } else if (this.first.slice(-2,) == "ior" && this.second.slice(-1,) == "i"){
+    } else if (this.first.slice(-3,) == "ior" && this.second.slice(-1,) == "i"){
       return this.second.slice(0,-1) + "iēris";
     } else if (this.second.slice(-1,) == "i"){
       return this.second.slice(0,-1) + "ēris";
@@ -931,7 +931,7 @@ get secondSingFutPerPass(){
    }
 
    futPerPassSecondSingTrans(){
-     return "You will have " +  this.verbed;
+     return "You will have " +  this.ppVerb;
    }
 
   
@@ -3434,15 +3434,16 @@ console.log(ranVerb.presFirstSing());
     //load questions here
     questions = [
       {
-      question:  Object.values(ranPassiveVerbArray3[0])[0].toUpperCase() + " =  __________________",
-      choices: [Object.values(ranPassiveVerbArray3[1])[1], Object.values(ranPassiveVerbArray3[2])[1], Object.values(ranPassiveVerbArray3[3])[1], Object.values(ranPassiveVerbArray3[0])[1]],
-      answer: Object.values(ranPassiveVerbArray3[0])[0].toUpperCase() + " = " + Object.values(ranPassiveVerbArray3[0])[1].toUpperCase(),
-      },
-      {
       question:  Object.values(ranPassiveVerbArray6[0])[0].toUpperCase() + " =  __________________",
       choices: [Object.values(ranPassiveVerbArray6[1])[1], Object.values(ranPassiveVerbArray6[2])[1], Object.values(ranPassiveVerbArray6[3])[1], Object.values(ranPassiveVerbArray6[0])[1]],
       answer: Object.values(ranPassiveVerbArray6[0])[0].toUpperCase() + " = " + Object.values(ranPassiveVerbArray6[0])[1].toUpperCase(),
       },
+      {
+      question:  Object.values(ranPassiveVerbArray3[0])[0].toUpperCase() + " =  __________________",
+      choices: [Object.values(ranPassiveVerbArray3[1])[1], Object.values(ranPassiveVerbArray3[2])[1], Object.values(ranPassiveVerbArray3[3])[1], Object.values(ranPassiveVerbArray3[0])[1]],
+      answer: Object.values(ranPassiveVerbArray3[0])[0].toUpperCase() + " = " + Object.values(ranPassiveVerbArray3[0])[1].toUpperCase(),
+      },
+      
       {
       question:  Object.values(ranPassiveVerbArray5[0])[0].toUpperCase() + " =  __________________",
       choices: [Object.values(ranPassiveVerbArray5[1])[1], Object.values(ranPassiveVerbArray5[2])[1], Object.values(ranPassiveVerbArray5[3])[1], Object.values(ranPassiveVerbArray5[0])[1]],
